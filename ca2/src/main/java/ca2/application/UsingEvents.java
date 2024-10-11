@@ -29,13 +29,13 @@ public class UsingEvents {
         displayEvents(events);
 
         while (true) {
-            System.out.print("\nMenu:");
-            System.out.print("1. Display all Events");
-            System.out.print("2. Display all Events from a specific source");
-            System.out.print("3. Generate a new Event and insert it into the array");
-            System.out.print("4. View active sources");
-            System.out.print("5. Clear all events before a specific timestamp. This should display all cleared events");
-            System.out.print("6. Exit the program");
+            System.out.println("\nMenu:");
+            System.out.println("1. Display all Events");
+            System.out.println("2. Display all Events from a specific source");
+            System.out.println("3. Generate a new Event and insert it into the array");
+            System.out.println("4. View active sources");
+            System.out.println("5. Clear all events before a specific timestamp. This should display all cleared events");
+            System.out.println("6. Exit the program");
             int choice = 0;
             try {
                 choice = scanner.nextInt();
@@ -54,7 +54,8 @@ public class UsingEvents {
                     displayEventsFromSource(events);
                     break;
                 case 3:
-                    generateEventAndInsert(events);
+                    events = generateEventAndInsert(events);
+                    displayEvents(events);
                     break;
                 case 4:
                     displayActiveSources(events);
@@ -80,7 +81,7 @@ public class UsingEvents {
         int count = 0;
         for (Event event : eventArray) {
             count += 1;
-            System.out.println(event + " In position: " + (count - 1));
+            System.out.println(event.format() + " In position: " + (count - 1));
         }
     }
 
@@ -92,6 +93,7 @@ public class UsingEvents {
     public static void displayEventsFromSource(Event[] eventArray) {
         while (true) {
             try {
+                System.out.println("Please enter a source");
                 String source = scanner.next();
                 scanner.nextLine();
                 Event.validateSource(source);
@@ -104,7 +106,7 @@ public class UsingEvents {
 
                 if (counter == 0) {
                     System.out.println("No events found for the source: " + source);
-                    continue;
+                    break;
                 }
 
                 Event[] events = new Event[counter];
@@ -116,6 +118,7 @@ public class UsingEvents {
                 }
                 System.out.println("Events from source: " + source);
                 displayEvents(events);
+                break;
             } catch (IllegalArgumentException e) {
                 System.out.println("Invalid source, please try again.");
                 scanner.nextLine();
@@ -128,10 +131,11 @@ public class UsingEvents {
      *
      * @param eventArray the array of events to insert into
      */
-    public static void generateEventAndInsert(Event[] eventArray) {
+    public static Event[] generateEventAndInsert(Event[] eventArray) {
         Event newEvent = EventGenerator.generateEvent();
         System.out.println(newEvent.format());
-        Event.insertSorted(eventArray, newEvent);
+        Event[] events = Event.insertSorted(eventArray, newEvent);
+        return events;
     }
 
     /**
@@ -170,7 +174,7 @@ public class UsingEvents {
         Event[] deletedEvents = Event.deleteAllBefore(eventArray, deleteBeforeTimestamp);
         System.out.println("Deleted events:");
         for (Event event : deletedEvents) {
-            System.out.println(event);
+            System.out.println(event.format());
         }
     }
 }

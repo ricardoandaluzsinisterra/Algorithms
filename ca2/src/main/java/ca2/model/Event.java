@@ -212,7 +212,7 @@ public class Event implements Comparable<Event> {
      * @param source      the source of the event
      * @param description the description of the event
      */
-    private static void validateEvent(UUID id, LocalDateTime timestamp, String source, String description) {
+    public static void validateEvent(UUID id, LocalDateTime timestamp, String source, String description) {
         if (id == null) {
             throw new IllegalArgumentException("Id cannot be null");
         }
@@ -239,7 +239,7 @@ public class Event implements Comparable<Event> {
      * @param source      the source of the event
      * @param description the description of the event
      */
-    private static void validateEvent(String source, String description) {
+    public static void validateEvent(String source, String description) {
         if (description == null) {
             throw new IllegalArgumentException("Description cannot be null");
         }
@@ -266,7 +266,7 @@ public class Event implements Comparable<Event> {
      *
      * @param eventArray the array of events to be validated
      */
-    private static void validateArrayOfEvents(Event[] eventArray) {
+    public static void validateArrayOfEvents(Event[] eventArray) {
         if (eventArray == null || eventArray.length == 0) {
             throw new IllegalArgumentException("Event array cannot be null nor empty.");
         }
@@ -282,7 +282,7 @@ public class Event implements Comparable<Event> {
      *
      * @param event the event to be validated
      */
-    private static void validateEvent(Event event) {
+    public static void validateEvent(Event event) {
         if (event == null) {
             throw new IllegalArgumentException("Event cannot be null");
         }
