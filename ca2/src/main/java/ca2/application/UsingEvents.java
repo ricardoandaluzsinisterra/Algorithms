@@ -1,5 +1,8 @@
 package ca2.application;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -38,17 +41,25 @@ public class UsingEvents {
 
             switch (choice) {
                 case 1:
-                displayEvents(events);
-
+                    displayEvents(events);
+                    break;
                 case 2:
-                displayEventsFromSource(events);
-
+                    displayEventsFromSource(events);
+                    break;
                 case 3:
-                generateEventAndInsert(events);
-
+                    generateEventAndInsert(events);
+                    break;
                 case 4:
-                displayActiveSources(events);
-
+                    displayActiveSources(events);
+                    break;
+                case 5:
+                    clearEvents(events);
+                    break;
+                case 6:
+                    System.out.println("Exiting...");
+                    return;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
             }
         }
 
@@ -111,7 +122,25 @@ public class UsingEvents {
         }
     }
 
-    public static void clearEvents(Event[] eventArray){
-        
+    public static void clearEvents(Event[] eventArray) {
+        Scanner scanner = new Scanner(System.in);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime deleteBeforeTimestamp = null;
+
+        while (deleteBeforeTimestamp == null) {
+            System.out.print("Enter the timestamp (yyyy-MM-dd HH:mm:ss): ");
+            String input = scanner.nextLine();
+            try {
+                deleteBeforeTimestamp = LocalDateTime.parse(input, formatter);
+            } catch (DateTimeParseException e) {
+                System.out.println("Invalid format. Please enter the timestamp in the format yyyy-MM-dd HH:mm:ss.");
+            }
+        }
+
+        Event[] deletedEvents = Event.deleteAllBefore(eventArray, deleteBeforeTimestamp);
+        System.out.println("Deleted events:");
+        for (Event event : deletedEvents) {
+            System.out.println(event);
+        }
     }
 }
