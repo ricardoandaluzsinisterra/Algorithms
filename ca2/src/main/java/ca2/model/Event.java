@@ -1,16 +1,26 @@
 package ca2.model;
 import java.time.LocalDateTime;
-import java.util.Objects;
 import java.util.UUID;
 
-public class Event implements Comparable<Event>{
-    public final static String [] VALID_SOURCES = {"HEAT", "TEMP", "PLUG", "MOTION", "CAMERA"};
+/**
+ * Represents an event with a unique ID, timestamp, source, and description.
+ */
+public class Event implements Comparable<Event> {
+    public final static String[] VALID_SOURCES = {"HEAT", "TEMP", "PLUG", "MOTION", "CAMERA"};
     private UUID id;
     private LocalDateTime timestamp;
     private String source;
     private String description;
 
-    public Event(UUID id, LocalDateTime timestamp, String source, String description){
+    /**
+     * Constructs an Event with the specified ID, timestamp, source, and description.
+     *
+     * @param id          the unique identifier of the event
+     * @param timestamp   the timestamp of the event
+     * @param source      the source of the event
+     * @param description the description of the event
+     */
+    public Event(UUID id, LocalDateTime timestamp, String source, String description) {
         validateEvent(id, timestamp, source, description);
         this.id = id;
         this.timestamp = timestamp;
@@ -18,28 +28,59 @@ public class Event implements Comparable<Event>{
         this.description = description;
     }
 
-    public Event(String source, String description){
+    /**
+     * Constructs an Event with the specified source and description.
+     *
+     * @param source      the source of the event
+     * @param description the description of the event
+     */
+    public Event(String source, String description) {
         validateEvent(source, description);
         this.source = source;
         this.description = description;
     }
 
+    /**
+     * Returns the unique identifier of the event.
+     *
+     * @return the unique identifier of the event
+     */
     public UUID getId() {
         return id;
     }
 
+    /**
+     * Returns the timestamp of the event.
+     *
+     * @return the timestamp of the event
+     */
     public LocalDateTime getTimestamp() {
         return timestamp;
     }
 
+    /**
+     * Returns the source of the event.
+     *
+     * @return the source of the event
+     */
     public String getSource() {
         return source;
     }
 
+    /**
+     * Returns the description of the event.
+     *
+     * @return the description of the event
+     */
     public String getDescription() {
         return description;
     }
-    
+
+    /**
+     * Returns a string representation of the event.
+     *
+     * @return a string representation of the event
+     */
     @Override
     public String toString() {
         return "Event{" +
@@ -50,6 +91,11 @@ public class Event implements Comparable<Event>{
                 '}';
     }
 
+    /**
+     * Returns a formatted string representation of the event.
+     *
+     * @return a formatted string representation of the event
+     */
     public String format() {
         return "Event Details:\n" +
                 "ID: " + id + "\n" +
@@ -58,24 +104,24 @@ public class Event implements Comparable<Event>{
                 "Description: " + description;
     }
 
+    /**
+     * Compares this event to another event based on their timestamps.
+     *
+     * @param other the other event to compare to
+     * @return a negative integer, zero, or a positive integer as this event is less than, equal to, or greater than the specified event
+     */
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Event event = (Event) o;
-        return Objects.equals(id, event.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, timestamp, source, description);
-    }
-
-    @Override
-    public int compareTo(Event other){
+    public int compareTo(Event other) {
         return this.timestamp.compareTo(other.timestamp);
     }
 
+    /**
+     * Deletes all events before the specified timestamp and returns an array of the deleted events.
+     *
+     * @param eventArray           the array of events
+     * @param deleteBeforeTimestamp the timestamp before which events should be deleted
+     * @return an array of the deleted events
+     */
     public static Event[] deleteAllBefore(Event[] eventArray, LocalDateTime deleteBeforeTimestamp) {
         validateArrayOfEvents(eventArray);
         int index = 0;
@@ -92,26 +138,32 @@ public class Event implements Comparable<Event>{
         return deletedEvents;
     }
 
-    public static String[] getActiveSources(Event[] eventArray){
+    /**
+     * Returns an array of active sources from the given array of events.
+     *
+     * @param eventArray the array of events
+     * @return an array of active sources
+     */
+    public static String[] getActiveSources(Event[] eventArray) {
         validateArrayOfEvents(eventArray);
-        //Create a temporary array tempSources to store unique sources, and initialize 
-        //a counter count to keep track of the number of unique sources.
+        // Create a temporary array tempSources to store unique sources, and initialize 
+        // a counter count to keep track of the number of unique sources.
         String[] tempSources = new String[eventArray.length];
         int count = 0;
-        //For each event in the array get the source of the event and initialize the found boolean.
-        for (Event event : eventArray){
+        // For each event in the array get the source of the event and initialize the found boolean.
+        for (Event event : eventArray) {
             String source = event.getSource();
             boolean found = false;
-            //For loop that checks if the variable was already found.
-            for (int i = 0; i < count; i++){
-                if (tempSources[i].equals(source)){
+            // For loop that checks if the variable was already found.
+            for (int i = 0; i < count; i++) {
+                if (tempSources[i].equals(source)) {
                     found = true;
                     break;
                 }
             }
-            //If, after coming out of the loop, the boolean is set to false, 
-            //then add the source at index count, and increment the latter.
-            if (!found){
+            // If, after coming out of the loop, the boolean is set to false, 
+            // then add the source at index count, and increment the latter.
+            if (!found) {
                 tempSources[count] = source;
                 count++;
             }
@@ -122,9 +174,16 @@ public class Event implements Comparable<Event>{
             activeSources[i] = tempSources[i];
         }
         return activeSources;
-     }
+    }
 
-     public static Event[] insertSorted(Event[] eventArray, Event event) {
+    /**
+     * Inserts an event into a sorted array of events and returns the new sorted array.
+     *
+     * @param eventArray the array of events
+     * @param event      the event to be inserted
+     * @return the new sorted array of events
+     */
+    public static Event[] insertSorted(Event[] eventArray, Event event) {
         validateArrayOfEvents(eventArray);
         validateEvent(event);
         int index = 0;
@@ -141,20 +200,28 @@ public class Event implements Comparable<Event>{
         for (int i = index; i < eventArray.length; i++) {
             result[i + 1] = eventArray[i];
         }
-    
+
         return result;
     }
 
-    private static void validateEvent(UUID id, LocalDateTime timestamp, String source, String description){
-        if (id == null){
+    /**
+     * Validates the event with the specified ID, timestamp, source, and description.
+     *
+     * @param id          the unique identifier of the event
+     * @param timestamp   the timestamp of the event
+     * @param source      the source of the event
+     * @param description the description of the event
+     */
+    private static void validateEvent(UUID id, LocalDateTime timestamp, String source, String description) {
+        if (id == null) {
             throw new IllegalArgumentException("Id cannot be null");
         }
 
-        if (timestamp == null){
+        if (timestamp == null) {
             throw new IllegalArgumentException("timestamp cannot be null");
         }
 
-        if (description == null){
+        if (description == null) {
             throw new IllegalArgumentException("Description cannot be null");
         }
 
@@ -165,16 +232,27 @@ public class Event implements Comparable<Event>{
         }
         throw new IllegalArgumentException("Invalid source:" + source);
     }
-    
-    private static void validateEvent(String source, String description){
-        if (description == null){
+
+    /**
+     * Validates the event with the specified source and description.
+     *
+     * @param source      the source of the event
+     * @param description the description of the event
+     */
+    private static void validateEvent(String source, String description) {
+        if (description == null) {
             throw new IllegalArgumentException("Description cannot be null");
         }
 
         validateSource(source);
     }
 
-    public static void validateSource(String source){
+    /**
+     * Validates the specified source.
+     *
+     * @param source the source to be validated
+     */
+    public static void validateSource(String source) {
         for (String validSource : VALID_SOURCES) {
             if (validSource.equals(source)) {
                 return;
@@ -183,8 +261,13 @@ public class Event implements Comparable<Event>{
         throw new IllegalArgumentException("Invalid source:" + source);
     }
 
-    private static void validateArrayOfEvents(Event[] eventArray){
-        if (eventArray == null || eventArray.length == 0){
+    /**
+     * Validates the specified array of events.
+     *
+     * @param eventArray the array of events to be validated
+     */
+    private static void validateArrayOfEvents(Event[] eventArray) {
+        if (eventArray == null || eventArray.length == 0) {
             throw new IllegalArgumentException("Event array cannot be null nor empty.");
         }
         for (Event event : eventArray) {
@@ -194,10 +277,14 @@ public class Event implements Comparable<Event>{
         }
     }
 
-    private static void validateEvent(Event event){
-        if(event == null){
+    /**
+     * Validates the specified event.
+     *
+     * @param event the event to be validated
+     */
+    private static void validateEvent(Event event) {
+        if (event == null) {
             throw new IllegalArgumentException("Event cannot be null");
         }
     }
 }
-
