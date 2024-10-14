@@ -26,20 +26,23 @@ public class Merge {
             if (array1[positionIndex1] >= array2[positionIndex2]){
                 newArray[slot] = array1[positionIndex1++];
             }
-            if (array2[positionIndex2] >= array1[positionIndex1]){
+             else if (array2[positionIndex2] >= array1[positionIndex1]){
                 newArray[slot] = array2[positionIndex2++];
             }
-            if (positionIndex1 > array1.length){
-                for (int num: array2){
-                    newArray[slot] = array2[num];
+            //best way possible for if/else statements
+            else{
+                if (positionIndex1 == array1.length){
+                    for (int i=positionIndex2; i<newArray.length; i++){
+                        newArray[slot] = array2[i];
+                    }
+                }
+                else if (positionIndex2 == array2.length){
+                    //best way
+                    while (positionIndex1 < array1.length){
+                        newArray[slot++] = array1[positionIndex1++];
+                    }
                 }
             }
-            if (positionIndex2 > array2.length){
-                for (int num: array1){
-                    newArray[slot] = array1[num];
-                }
-            }
-
         }
         return newArray;
     }
