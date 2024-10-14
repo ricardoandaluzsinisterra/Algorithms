@@ -1,7 +1,8 @@
-package deduplicationsorted.utils;
+package merge.utils;
 
-public class merge {
+public class Merge {
     public int[] Unsorted(int[] array1, int[] array2){
+        //guard conditions missing
         int[] newArray = new int[array1.length + array2.length];
         int positionIndex = 0;
         for (int num : array1){
@@ -17,6 +18,7 @@ public class merge {
     }
 
     public int[] Sorted(int[] array1, int[] array2){
+        //guard conditions missing
         int[] newArray = new int[array1.length + array2.length];
         int positionIndex1 = 0;
         int positionIndex2 = 0;
