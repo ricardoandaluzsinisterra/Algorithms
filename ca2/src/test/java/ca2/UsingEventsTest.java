@@ -72,3 +72,4 @@ class UsingEventsTest {
         UsingEvents.displayActiveSources(events);
         assertEquals(3, events.length);
     }
+}
