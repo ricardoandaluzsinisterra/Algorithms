@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: ca2.UsingEventsTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.011 s <<< FAILURE! - in ca2.UsingEventsTest
+generateEventAndInsert  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	Syntax error, insert "}" to complete ClassBody
+
+	at ca2.UsingEventsTest.<init>(UsingEventsTest.java:74)
+
+displayEventsFromSource  Time elapsed: 0 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	Syntax error, insert "}" to complete ClassBody
+
+	at ca2.UsingEventsTest.<init>(UsingEventsTest.java:74)
+
+displayActiveSources  Time elapsed: 0 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	Syntax error, insert "}" to complete ClassBody
+
+	at ca2.UsingEventsTest.<init>(UsingEventsTest.java:74)
+
+displayEvents  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	Syntax error, insert "}" to complete ClassBody
+
+	at ca2.UsingEventsTest.<init>(UsingEventsTest.java:74)
+
