@@ -55,4 +55,27 @@ public class Sort {
             mergedArrayPos++;
         }
     }
+
+    public void quickSort(int[] data, int start, int end){
+        if (start < end){
+            int partitionPoint = partition(data, start, end);
+
+            //do the same check for each partition. The -1 can change depending on the partitioning approach.
+            quickSort(data, start, partitionPoint-1);
+            quickSort(data, partitionPoint + 1, end);
+        }
+    }
+
+    public int partition(int[] data, int low, int high){
+        int pivot = data[high];
+        int unpartitionedIndex = low;
+        for(int i= low; i < high; i++){
+            if(data[i] < pivot){
+                swap(data, data[i], unpartitionedIndex);
+                unpartitionedIndex++;
+            }
+            swap(data, unpartitionedIndex, high);
+        }
+        return unpartitionedIndex;
+    }
 }
