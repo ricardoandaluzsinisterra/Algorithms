@@ -18,8 +18,15 @@ public class Recursion {
 
     //Wrapper method
     public static boolean isPalindrome(double number) {
-        //Couldn't think of any other way than to change it to a string and using charat
-        String str = Double.toString(number).replace("-", "").replace(".", "");
+        String str;
+        // Had to investigate on how to check a whole number so in the case of 202.0 the translation into string doesnt
+        // return 2020.
+        if (number == (long) number) {
+            str = Long.toString((long) number);
+        } else {
+            str = Double.toString(number).replace(".", "");
+        }
+        str = str.replace("-", "");
         return isPalindromeRecursive(str, 0, str.length() - 1);
     }
 
@@ -28,7 +35,7 @@ public class Recursion {
             return true;
         }
         if (str.charAt(left) != str.charAt(right)) {
-            return false;
+            return false; 
         }
         return isPalindromeRecursive(str, left + 1, right - 1);
     }
