@@ -1,5 +1,7 @@
 package utils;
 
+import java.io.File;
+
 public class Recursion {
     public static int power(int x, int y){
         if (y == 0){
@@ -16,6 +18,7 @@ public class Recursion {
 
     //Wrapper method
     public static boolean isPalindrome(double number) {
+        //Couldn't think of any other way than to change it to a string and using charat
         String str = Double.toString(number).replace("-", "").replace(".", "");
         return isPalindromeRecursive(str, 0, str.length() - 1);
     }
@@ -44,6 +47,34 @@ public class Recursion {
         return isSortedDescendingRecursive(array, index + 1);
     }
 
-    
+    public static int countSubstringOccurrences(String text, String substring) {
+        if (text.length() < substring.length()) {
+            return 0;
+        }
+        //Used substring because couldn't think of any other way. I am having some health problems atm.
+        if (text.substring(0, substring.length()).equals(substring)) {
+            return 1 + countSubstringOccurrences(text.substring(1), substring);
+        } else {
+            return countSubstringOccurrences(text.substring(1), substring);
+        }
+    }
 
+    public static void listFilesAndDirectories(String directoryPath) {
+        File directory = new File(directoryPath);
+        if (directory.exists() && directory.isDirectory()) {
+            File[] files = directory.listFiles();
+
+            if (files != null) {
+                for (File file : files) {
+                    System.out.println(file.getName());
+                    
+                    if (file.isDirectory()) {
+                        listFilesAndDirectories(file.getPath());
+                    }
+                }
+            }
+        } else {
+            System.out.println("The provided path is not a valid directory.");
+        }
+    }
 }
