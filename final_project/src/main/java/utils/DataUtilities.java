@@ -8,12 +8,15 @@ import java.util.Scanner;
 
 import model.Request;
 
+
+
 public class DataUtilities {
-    public LinkedList<Request> fileToArray(String filename){
+    public static LinkedList<Request> fileToArray(String filename){
         LinkedList<Request> requests = new LinkedList<>();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
         try {
             File file = new File(filename);
+            System.out.println("Attempting to read file: " + file.getAbsolutePath());
             Scanner reader = new Scanner(file);
 
             while (reader.hasNextLine()){
@@ -33,5 +36,13 @@ public class DataUtilities {
             System.err.println(e);
         }
         return requests;
+    }
+
+    public static HashMap<String, Request> linkedToMap(LinkedList<Request> requests){
+        HashMap<String, Request> map = new HashMap<>();
+        for (Request request : requests){
+            map.put(request.getUserID(), request);
+        }
+        return map;
     }
 }

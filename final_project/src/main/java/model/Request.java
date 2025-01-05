@@ -46,7 +46,7 @@ public class Request implements Comparable<Request> {
     }
 
     public String format() {
-        return "Event Details:\n" +
+        return "\nEvent Details:\n" +
                 "Request ID: " + requestID + "\n" +
                 "User ID: " + userID + "\n" +
                 "Timestamp: " + timestamp + "\n" +
