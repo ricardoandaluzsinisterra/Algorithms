@@ -38,11 +38,21 @@ public class DataUtilities {
         return requests;
     }
 
-    public static HashMap<String, Request> linkedToMap(LinkedList<Request> requests){
+    public static HashMap<String, Request> linkedToMap(LinkedList<Request> requests, String key){
         HashMap<String, Request> map = new HashMap<>();
-        for (Request request : requests){
-            map.put(request.getUserID(), request);
+        switch (key) {
+            case "userId":
+                for (Request request : requests){
+                    map.put(request.getUserID(), request);
+                }
+                return map;
+            case "requestType":
+                for (Request request : requests){
+                    map.put(request.getRequestType(), request);
+                }
+                return map;    
+            default:
+                throw new AssertionError("No matching key type");
         }
-        return map;
     }
 }

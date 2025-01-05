@@ -15,8 +15,13 @@ import utils.StringArrayList;
 public class Main {
     public static void main(String[] args) {
         LinkedList<Request> requests = DataUtilities.fileToArray("src/main/resources/dataset1.txt");
+        HashMap<String, Request> userMap = DataUtilities.linkedToMap(requests, "userId");
+        HashMap<String, Request> typeMap = DataUtilities.linkedToMap(requests, "requestType");
         displayRequests(requests);
-        userWithHighestNumberOfRequests(requests);
+        userWithHighestNumberOfRequests(userMap);
+        filterAndDisplay(userMap, "UserB");
+        identifyRequestType(typeMap, "GET");
+
     }
     
     public static void displayRequests(LinkedList<Request> requests){
@@ -26,9 +31,7 @@ public class Main {
         }
     }
 
-    public static void userWithHighestNumberOfRequests(LinkedList<Request> requests){
-        HashMap<String, Request> map = DataUtilities.linkedToMap(requests);
-        map.display();
+    public static void userWithHighestNumberOfRequests(HashMap<String, Request> map){
         ArrayList<String> keys = map.getKeys();
         int maxRequests = 0;
         String maxRequestsKey = null;
@@ -59,4 +62,29 @@ public class Main {
         }
         System.out.println("\nThe user with the most unique requests is:" + maxRequestsKey);
     }
+
+    public static void filterAndDisplay(HashMap<String, Request> map, String userId){
+        ArrayList<Request> requests = map.get(userId);
+        if(requests == null){
+            System.out.println("No requests found or incorrect user input");
+        } 
+        else {
+            for (Request request : requests) {
+                System.out.println(request.format());
+            }
+        }
+    }
+
+    public static void identifyRequestType(HashMap<String, Request> map, String requestType){
+        ArrayList<Request> requests = map.get(requestType);
+        if(requests == null){
+            System.out.println("No requests found or incorrect user input");
+        } 
+        else {
+            for (Request request : requests) {
+                System.out.println(request.format());
+            }
+        }
+    }
+
 }
