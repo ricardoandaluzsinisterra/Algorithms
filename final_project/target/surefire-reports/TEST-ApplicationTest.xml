@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ApplicationTest" time="0.123" tests="13" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="22"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\target\test-classes;C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\target\classes;C:\Users\code\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\code\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\code\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\code\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\code\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\code\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Dublin"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="22"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
+    <property name="sun.java.command" value="C:\Users\code\AppData\Local\Temp\surefire8360646845393027178\surefirebooter-20250106000649547_3.jar C:\Users\code\AppData\Local\Temp\surefire8360646845393027178 2025-01-06T00-06-49_389-jvmRun1 surefire-20250106000649547_1tmp surefire_0-20250106000649547_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="ApplicationTest"/>
+    <property name="surefire.test.class.path" value="C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\target\test-classes;C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\target\classes;C:\Users\code\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\code\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\code\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\code\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\code\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\code\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\code"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-22"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\code\AppData\Local\Temp\surefire8360646845393027178\surefirebooter-20250106000649547_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="22.0.2+9-70"/>
+    <property name="user.name" value="code"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="C:\Users\code\.vscode\extensions\oracle.oracle-java-23.0.1\nbcode\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="localRepository" value="C:\Users\code\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\code\AppData\Local\Temp\"/>
+    <property name="java.version" value="22.0.2"/>
+    <property name="user.dir" value="C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-22\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft\Azure Functions Core Tools\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.9.9\bin;C:\Program Files\Tailscale\;C:\Users\ricar\AppData\Local\Microsoft\WindowsApps;C:\Users\code\AppData\Local\Programs\Python\Python312;C:\Users\code\AppData\Local\Programs\Python\Python312\Scripts;;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\code\AppData\Local\Programs\Python\Launcher\;C:\Users\code\AppData\Local\Microsoft\WindowsApps;;C:\Users\code\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="22.0.2+9-70"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="66.0"/>
+  </properties>
+  <testcase name="testDeduplication" classname="ApplicationTest" time="0.031">
+    <system-out><![CDATA[Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset1.txt
+Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset2.txt
+
+Deduplicating the new dataset to remove all requests appearing in both the original log and here.
+]]></system-out>
+  </testcase>
+  <testcase name="testDisplayRequests" classname="ApplicationTest" time="0.021">
+    <system-out><![CDATA[Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset1.txt
+Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset2.txt
+2. Displays all requests in reverse chronological order, i.e. newest to oldest.
+
+Event Details:
+Request ID: REQ030
+User ID: UserD
+Timestamp: Tue Dec 10 10:25:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ029
+User ID: UserA
+Timestamp: Tue Dec 10 10:20:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ028
+User ID: UserC
+Timestamp: Tue Dec 10 10:15:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ027
+User ID: UserB
+Timestamp: Tue Dec 10 10:10:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ026
+User ID: UserA
+Timestamp: Tue Dec 10 10:05:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ025
+User ID: UserD
+Timestamp: Tue Dec 10 10:00:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ024
+User ID: UserC
+Timestamp: Tue Dec 10 09:55:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ023
+User ID: UserA
+Timestamp: Tue Dec 10 09:50:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ022
+User ID: UserB
+Timestamp: Tue Dec 10 09:45:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ021
+User ID: UserD
+Timestamp: Tue Dec 10 09:40:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ020
+User ID: UserC
+Timestamp: Tue Dec 10 09:35:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ019
+User ID: UserA
+Timestamp: Tue Dec 10 09:30:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ018
+User ID: UserB
+Timestamp: Tue Dec 10 09:25:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ017
+User ID: UserD
+Timestamp: Tue Dec 10 09:20:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ016
+User ID: UserA
+Timestamp: Tue Dec 10 09:15:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ015
+User ID: UserC
+Timestamp: Tue Dec 10 09:10:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ014
+User ID: UserB
+Timestamp: Tue Dec 10 09:05:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ013
+User ID: UserD
+Timestamp: Tue Dec 10 09:00:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ012
+User ID: UserA
+Timestamp: Tue Dec 10 08:55:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ011
+User ID: UserC
+Timestamp: Tue Dec 10 08:50:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ010
+User ID: UserB
+Timestamp: Tue Dec 10 08:45:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ009
+User ID: UserA
+Timestamp: Tue Dec 10 08:40:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ008
+User ID: UserD
+Timestamp: Tue Dec 10 08:35:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ007
+User ID: UserC
+Timestamp: Tue Dec 10 08:30:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ006
+User ID: UserB
+Timestamp: Tue Dec 10 08:25:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ005
+User ID: UserD
+Timestamp: Tue Dec 10 08:20:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ004
+User ID: UserC
+Timestamp: Tue Dec 10 08:15:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ003
+User ID: UserA
+Timestamp: Tue Dec 10 08:10:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ002
+User ID: UserB
+Timestamp: Tue Dec 10 08:05:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ001
+User ID: UserA
+Timestamp: Tue Dec 10 08:00:00 GMT 2024
+Request Type: GET
+]]></system-out>
+  </testcase>
+  <testcase name="testUserWithHighestNumberOfRequestsEarliest" classname="ApplicationTest" time="0.011">
+    <system-out><![CDATA[Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset1.txt
+Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset2.txt
+
+3. Identifies the user with the highest number of unique request types. If two or more users have the same number, display the user with the earliest request in the dataset.
+
+The user with the most unique requests is:UserA
+]]></system-out>
+  </testcase>
+  <testcase name="testDeduplicationAllDuplicates" classname="ApplicationTest" time="0.007">
+    <system-out><![CDATA[Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset1.txt
+Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset2.txt
+
+Deduplicating the new dataset to remove all requests appearing in both the original log and here.
+]]></system-out>
+  </testcase>
+  <testcase name="testIdentifyRequestsWithinTimeFrameNoMatches" classname="ApplicationTest" time="0.005">
+    <system-out><![CDATA[Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset1.txt
+Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset2.txt
+
+6. Identifies all requests within a specified timestamp range
+
+Event Details:
+Request ID: REQ001
+User ID: UserA
+Timestamp: Tue Dec 10 08:00:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ002
+User ID: UserB
+Timestamp: Tue Dec 10 08:05:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ003
+User ID: UserA
+Timestamp: Tue Dec 10 08:10:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ004
+User ID: UserC
+Timestamp: Tue Dec 10 08:15:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ005
+User ID: UserD
+Timestamp: Tue Dec 10 08:20:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ006
+User ID: UserB
+Timestamp: Tue Dec 10 08:25:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ007
+User ID: UserC
+Timestamp: Tue Dec 10 08:30:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ008
+User ID: UserD
+Timestamp: Tue Dec 10 08:35:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ009
+User ID: UserA
+Timestamp: Tue Dec 10 08:40:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ010
+User ID: UserB
+Timestamp: Tue Dec 10 08:45:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ011
+User ID: UserC
+Timestamp: Tue Dec 10 08:50:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ012
+User ID: UserA
+Timestamp: Tue Dec 10 08:55:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ013
+User ID: UserD
+Timestamp: Tue Dec 10 09:00:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ014
+User ID: UserB
+Timestamp: Tue Dec 10 09:05:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ015
+User ID: UserC
+Timestamp: Tue Dec 10 09:10:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ016
+User ID: UserA
+Timestamp: Tue Dec 10 09:15:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ017
+User ID: UserD
+Timestamp: Tue Dec 10 09:20:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ018
+User ID: UserB
+Timestamp: Tue Dec 10 09:25:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ019
+User ID: UserA
+Timestamp: Tue Dec 10 09:30:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ020
+User ID: UserC
+Timestamp: Tue Dec 10 09:35:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ021
+User ID: UserD
+Timestamp: Tue Dec 10 09:40:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ022
+User ID: UserB
+Timestamp: Tue Dec 10 09:45:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ023
+User ID: UserA
+Timestamp: Tue Dec 10 09:50:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ024
+User ID: UserC
+Timestamp: Tue Dec 10 09:55:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ025
+User ID: UserD
+Timestamp: Tue Dec 10 10:00:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ026
+User ID: UserA
+Timestamp: Tue Dec 10 10:05:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ027
+User ID: UserB
+Timestamp: Tue Dec 10 10:10:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ028
+User ID: UserC
+Timestamp: Tue Dec 10 10:15:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ029
+User ID: UserA
+Timestamp: Tue Dec 10 10:20:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ030
+User ID: UserD
+Timestamp: Tue Dec 10 10:25:00 GMT 2024
+Request Type: DELETE
+]]></system-out>
+  </testcase>
+  <testcase name="testUserWithHighestNumberOfRequestsRecent" classname="ApplicationTest" time="0.004">
+    <system-out><![CDATA[Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset1.txt
+Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset2.txt
+
+3. Identifies the user with the highest number of unique request types. If two or more users have the same number, display the user with the earliest request in the dataset.
+
+The user with the most unique requests is:UserB
+]]></system-out>
+  </testcase>
+  <testcase name="testIdentifyRequestsWithinTimeFrame" classname="ApplicationTest" time="0.004">
+    <system-out><![CDATA[Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset1.txt
+Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset2.txt
+
+6. Identifies all requests within a specified timestamp range
+
+Event Details:
+Request ID: REQ001
+User ID: UserA
+Timestamp: Tue Dec 10 08:00:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ002
+User ID: UserB
+Timestamp: Tue Dec 10 08:05:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ003
+User ID: UserA
+Timestamp: Tue Dec 10 08:10:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ004
+User ID: UserC
+Timestamp: Tue Dec 10 08:15:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ005
+User ID: UserD
+Timestamp: Tue Dec 10 08:20:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ006
+User ID: UserB
+Timestamp: Tue Dec 10 08:25:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ007
+User ID: UserC
+Timestamp: Tue Dec 10 08:30:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ008
+User ID: UserD
+Timestamp: Tue Dec 10 08:35:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ009
+User ID: UserA
+Timestamp: Tue Dec 10 08:40:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ010
+User ID: UserB
+Timestamp: Tue Dec 10 08:45:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ011
+User ID: UserC
+Timestamp: Tue Dec 10 08:50:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ012
+User ID: UserA
+Timestamp: Tue Dec 10 08:55:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ013
+User ID: UserD
+Timestamp: Tue Dec 10 09:00:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ014
+User ID: UserB
+Timestamp: Tue Dec 10 09:05:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ015
+User ID: UserC
+Timestamp: Tue Dec 10 09:10:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ016
+User ID: UserA
+Timestamp: Tue Dec 10 09:15:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ017
+User ID: UserD
+Timestamp: Tue Dec 10 09:20:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ018
+User ID: UserB
+Timestamp: Tue Dec 10 09:25:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ019
+User ID: UserA
+Timestamp: Tue Dec 10 09:30:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ020
+User ID: UserC
+Timestamp: Tue Dec 10 09:35:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ021
+User ID: UserD
+Timestamp: Tue Dec 10 09:40:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ022
+User ID: UserB
+Timestamp: Tue Dec 10 09:45:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ023
+User ID: UserA
+Timestamp: Tue Dec 10 09:50:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ024
+User ID: UserC
+Timestamp: Tue Dec 10 09:55:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ025
+User ID: UserD
+Timestamp: Tue Dec 10 10:00:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ026
+User ID: UserA
+Timestamp: Tue Dec 10 10:05:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ027
+User ID: UserB
+Timestamp: Tue Dec 10 10:10:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ028
+User ID: UserC
+Timestamp: Tue Dec 10 10:15:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ029
+User ID: UserA
+Timestamp: Tue Dec 10 10:20:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ030
+User ID: UserD
+Timestamp: Tue Dec 10 10:25:00 GMT 2024
+Request Type: DELETE
+]]></system-out>
+  </testcase>
+  <testcase name="testFilterAndDisplayNonExistentUser" classname="ApplicationTest" time="0.003">
+    <system-out><![CDATA[Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset1.txt
+Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset2.txt
+
+4. Filters and displays all requests made by a specific user based on their User ID.
+No requests found or incorrect user input
+]]></system-out>
+  </testcase>
+  <testcase name="testDeduplicationNoDuplicates" classname="ApplicationTest" time="0.007">
+    <system-out><![CDATA[Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset1.txt
+Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset2.txt
+
+Deduplicating the new dataset to remove all requests appearing in both the original log and here.
+]]></system-out>
+  </testcase>
+  <testcase name="testFilterAndDisplayExistingUser" classname="ApplicationTest" time="0.002">
+    <system-out><![CDATA[Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset1.txt
+Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset2.txt
+
+4. Filters and displays all requests made by a specific user based on their User ID.
+
+Event Details:
+Request ID: REQ002
+User ID: UserB
+Timestamp: Tue Dec 10 08:05:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ006
+User ID: UserB
+Timestamp: Tue Dec 10 08:25:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ010
+User ID: UserB
+Timestamp: Tue Dec 10 08:45:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ014
+User ID: UserB
+Timestamp: Tue Dec 10 09:05:00 GMT 2024
+Request Type: DELETE
+
+Event Details:
+Request ID: REQ018
+User ID: UserB
+Timestamp: Tue Dec 10 09:25:00 GMT 2024
+Request Type: PUT
+
+Event Details:
+Request ID: REQ022
+User ID: UserB
+Timestamp: Tue Dec 10 09:45:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ027
+User ID: UserB
+Timestamp: Tue Dec 10 10:10:00 GMT 2024
+Request Type: GET
+]]></system-out>
+  </testcase>
+  <testcase name="testUserWithLongestActiveSpan" classname="ApplicationTest" time="0.002">
+    <system-out><![CDATA[Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset1.txt
+Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset2.txt
+
+Identifies the user with the longest active span (i.e. the user with the longest time between their first and last request). If two or more users have the same length span, display the user with the latest request.
+
+The user with the longest active span is: null
+]]></system-out>
+  </testcase>
+  <testcase name="testIdentifyRequestTypePOST" classname="ApplicationTest" time="0.003">
+    <system-out><![CDATA[Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset1.txt
+Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset2.txt
+
+5. Identifies all requests of a specified type.
+
+Event Details:
+Request ID: REQ002
+User ID: UserB
+Timestamp: Tue Dec 10 08:05:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ006
+User ID: UserB
+Timestamp: Tue Dec 10 08:25:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ009
+User ID: UserA
+Timestamp: Tue Dec 10 08:40:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ013
+User ID: UserD
+Timestamp: Tue Dec 10 09:00:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ016
+User ID: UserA
+Timestamp: Tue Dec 10 09:15:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ020
+User ID: UserC
+Timestamp: Tue Dec 10 09:35:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ022
+User ID: UserB
+Timestamp: Tue Dec 10 09:45:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ025
+User ID: UserD
+Timestamp: Tue Dec 10 10:00:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ026
+User ID: UserA
+Timestamp: Tue Dec 10 10:05:00 GMT 2024
+Request Type: POST
+
+Event Details:
+Request ID: REQ028
+User ID: UserC
+Timestamp: Tue Dec 10 10:15:00 GMT 2024
+Request Type: POST
+]]></system-out>
+  </testcase>
+  <testcase name="testIdentifyRequestTypeGET" classname="ApplicationTest" time="0.002">
+    <system-out><![CDATA[Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset1.txt
+Attempting to read file: C:\Users\code\OneDrive - Dundalk Institute of Technology\Documents\Coding\elkhonduras java\algorithms\final_project\src\main\resources\dataset2.txt
+
+5. Identifies all requests of a specified type.
+
+Event Details:
+Request ID: REQ001
+User ID: UserA
+Timestamp: Tue Dec 10 08:00:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ004
+User ID: UserC
+Timestamp: Tue Dec 10 08:15:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ008
+User ID: UserD
+Timestamp: Tue Dec 10 08:35:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ010
+User ID: UserB
+Timestamp: Tue Dec 10 08:45:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ015
+User ID: UserC
+Timestamp: Tue Dec 10 09:10:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ021
+User ID: UserD
+Timestamp: Tue Dec 10 09:40:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ023
+User ID: UserA
+Timestamp: Tue Dec 10 09:50:00 GMT 2024
+Request Type: GET
+
+Event Details:
+Request ID: REQ027
+User ID: UserB
+Timestamp: Tue Dec 10 10:10:00 GMT 2024
+Request Type: GET
+]]></system-out>
+  </testcase>
+</testsuite>
